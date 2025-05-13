@@ -2,7 +2,7 @@ cou = 1
 import pandas as pd
 
 print(cou)
-print("Vous êtes sur l apage web de Jacques de Lavernette")
+print("Vous êtes sur la page web de Jacques de Lavernette")
 #How to run strimlit app in Anaconda prompt
 import streamlit as st
 st.write("Hello, world! This is a Streamlit app.")
