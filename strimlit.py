@@ -7,7 +7,7 @@ print("Vous êtes sur la page web de Jacques de Lavernette")
 import streamlit as st
 st.write("Hello, world! This is a Streamlit app.")
 
-st.title("Vous êtes sur l apage web de Jacques de Lavernette")
+st.title("Vous êtes sur la page web de Jacques de Lavernette")
 st. subheader("Mon site web")
 st.text("This is a simple text element.")
 # Choix dans une liste deroulante (dans la sidebar)
