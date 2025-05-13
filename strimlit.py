@@ -2,13 +2,13 @@ cou = 1
 import pandas as pd
 
 print(cou)
-print("Salut ça marche ! It's working !!")
+print("Vous êtes sur l apage web de Jacques de Lavernette")
 #How to run strimlit app in Anaconda prompt
 import streamlit as st
 st.write("Hello, world! This is a Streamlit app.")
 
-st.title("My Streamlit App")
-st. subheader("Try out the app!")
+st.title("Vous êtes sur l apage web de Jacques de Lavernette")
+st. subheader("Mon site web")
 st.text("This is a simple text element.")
 # Choix dans une liste deroulante (dans la sidebar)
 graph_type = st.sidebar.selectbox("lil Choisissez un type de graphique :", ["Ligne", "Barres", "Aucun"])
