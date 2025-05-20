@@ -1,24 +1,27 @@
-cou = 1
 import pandas as pd
-
-print(cou)
-print("Vous êtes sur la page web de Jacques de Lavernette")
+import seaborn as sns
 #How to run strimlit app in Anaconda prompt
 import streamlit as st
-st.write("Hello, world! This is a Streamlit app.")
+st.write("Hi! Vous êtes sur la page web de Jacques de Lavernette")
 
-st.title("Vous êtes sur la page web de Jacques de Lavernette")
-st. subheader("Mon site web")
-st.text("This is a simple text element.")
+st.title("Welcome to the wine paradise ! We will study the wine in this website")
+st. subheader("That's very intresting")
+a = st.text_input("what's your name ?")
+st.write("What's up ",a,"?")
+#age
+age = st.slider("What's your age ?", 0, 125, 25)
+st.write(f"Vous avez {age} ans.")
+import numpy as np
+
 # Choix dans une liste deroulante (dans la sidebar)
-graph_type = st.sidebar.selectbox("lil Choisissez un type de graphique :", ["Ligne", "Barres", "Aucun"])
+graph_type = st.sidebar.selectbox("lil choose your type of graphic ? :", ["Ligne", "Barres", "Aucun"])
 
 st.write(f"Vous avez choisi le type de graphique : {graph_type}")
 #3 UPLOAD CSV FILE
 uploaded_file = st.file_uploader("Téléchargez un fichier CSV", type=["csv"])
 
 if uploaded_file is not None:
-    import pandas as po
+    import pandas as pd
     df = pd.read_csv(uploaded_file)
     st.write("Voici un aperçu de votre fichier :")
     st.dataframe(df.head())
@@ -32,13 +35,9 @@ if uploaded_file is not None:
     else:
         st.write("Aucun graphique selectionné.")
 
-st.write("Merci d'avoir utilise notre application Streamlit !")
-#age
-age = st.slider("Quel åge avez-vous ?", 0, 100, 25)
-st.write(f"Vous avez {age} ans.")
-import numpy as np
+
+
 # Checkbox
-if st.checkbox("Afficher un tableau aléatoire"):
-    st.write(pd.DataFrame(np.random.randn(5, 3), columns=['A', 'B', 'C']))
-
-
+if st.checkbox("show the correlation"):
+    #To plot the heatmap of correlations:
+    print(sns.heatmap(df.corr(), cmap="YlGnBu", annot= True ))
